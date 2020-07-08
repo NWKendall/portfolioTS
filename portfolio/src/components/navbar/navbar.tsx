@@ -1,19 +1,21 @@
 import React from 'react';
-import { useStyles } from './navbar.styles'
+import { AppBar, Toolbar, Typography, Menu, MenuItem } from '@material-ui/core';
+import { useStyles } from './navbar.styles';
 
 
 const NavBar = () => {
     const classes = useStyles()
     return (
-        <div className={classes.navbarContainer}>
-            <h3 className={classes.name}>Nic Kendall</h3>
-            <ul className={classes.navbar}>
-                <li><a>About</a></li>
-                <li><a>Skills</a></li>
-                <li><a>Projects</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </div>
+        <AppBar position="static">
+            <Toolbar className={classes.navbarContainer}>
+                <Typography className={classes.name}>Nic Kendall</Typography>
+                <MenuItem>About</MenuItem>
+                <MenuItem>Skills</MenuItem>
+                <MenuItem>Projects</MenuItem>
+                <MenuItem>Contact</MenuItem>
+                
+            </Toolbar>
+        </AppBar>
     )
 }
 

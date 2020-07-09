@@ -3,10 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core';
 export const useStyles = makeStyles((theme) => 
     createStyles({
         navbarContainer: {
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            border: "green 1px solid",
+            backgroundColor: "#192231"
         },
         name: {
             fontSize: "2rem",
@@ -20,3 +17,9 @@ export const useStyles = makeStyles((theme) =>
         }
     })
 )    
+
+
+// cloud = #98878F
+// sunset = #985E6D
+// evening = #192231
+// stormy = #494E6B

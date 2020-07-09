@@ -1,19 +1,21 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Menu, MenuItem } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Menu, MenuItem, Icon } from '@material-ui/core';
+import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 import { useStyles } from './navbar.styles';
 
 
 const NavBar = () => {
     const classes = useStyles()
     return (
-        <AppBar position="static">
-            <Toolbar className={classes.navbarContainer}>
+        <AppBar position="static" className={classes.navbarContainer}>
+            <Toolbar className={classes.navbar}>
                 <Typography className={classes.name}>Nic Kendall</Typography>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Skills</MenuItem>
-                <MenuItem>Projects</MenuItem>
-                <MenuItem>Contact</MenuItem>
-                
+                <LinkedInIcon aria-label="LinkedIn">LinkedIn</LinkedInIcon>
+                <FileCopyIcon>Resume</FileCopyIcon>
+                <EmailIcon>nic.kendall.dev@protonmail.com</EmailIcon>                
+                <Icon></Icon>
             </Toolbar>
         </AppBar>
     )

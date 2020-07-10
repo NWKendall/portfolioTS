@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@material-ui/core';
 export const useStyles = makeStyles((theme) => 
     createStyles({
         navbarContainer: {
-            backgroundColor: "#192231"
+            backgroundColor: "#233237"
         },
         name: {
             fontSize: "2rem",
@@ -14,6 +14,11 @@ export const useStyles = makeStyles((theme) =>
             border: "pink 1px solid",
             margin: 0,
             padding: 0,
+        },
+        icon: {
+           '&:hover' : {
+               cursor: "pointer",
+           }
         }
     })
 )    

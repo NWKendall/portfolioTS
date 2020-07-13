@@ -1,25 +1,33 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Tooltip, Icon } from '@material-ui/core';
-import EmailIcon from '@material-ui/icons/Email';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
-import { useStyles } from './navbar.styles';
-
+import React from "react";
+import "./navbar.styles.css";
+import { Tooltip } from "@material-ui/core";
+import EmailIcon from "@material-ui/icons/Email";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 
 const NavBar = () => {
-    const classes = useStyles()
-    return (
-        <AppBar position="static" className={classes.navbarContainer}>
-            <Toolbar className={classes.navbar}>
-                <Typography className={classes.name}>Nic Kendall</Typography>
-                <LinkedInIcon aria-label="LinkedIn" className={classes.icon}>LinkedIn</LinkedInIcon>
-                <FileCopyIcon className={classes.icon}>Resume</FileCopyIcon>
-                <Tooltip title="nic.kendall.dev@protonmail.com" className={classes.icon}>
-                    <EmailIcon />                
-                </Tooltip>
-            </Toolbar>
-        </AppBar>
-    )
-}
+  return (
+    <div className="navbarContainer">
+      <h3 className="myName">Nic Kendall</h3>
+      <nav className="navbar">
+        <Tooltip title="www.linkedin.com/in/NWKendall">
+          <a className="icon" href="https://linkedin.com/in/nwkendall">
+            <LinkedInIcon aria-label="LinkedIn">LinkedIn</LinkedInIcon>
+          </a>
+        </Tooltip>
+        <Tooltip title="Click to download PDF">
+          <a className="icon">
+            <FileCopyIcon>Resume</FileCopyIcon>
+          </a>
+        </Tooltip>
+        <Tooltip title="nic.kendall.dev@protonmail.com">
+          <a href="mailto:nic.kendall.dev@protonmail.com" className="icon">
+            <EmailIcon />
+          </a>
+        </Tooltip>
+      </nav>
+    </div>
+  );
+};
 
-export default NavBar
+export default NavBar;

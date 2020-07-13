@@ -1,0 +1,34 @@
+.navbarContainer {
+    background-color: #233237;
+    border: skyblue 1px solid;
+    display: flex;
+    justify-content: space-around;
+
+}
+.myName {
+    font-size: 2rem;
+}
+.navbar {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    border: pink 1px solid;
+    margin: 0;
+    padding: 0;
+}
+.icon{
+    color: white;
+}
+.icon:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+/* 
+cloud = #98878F
+sunset = #985E6D
+evening = #192231
+stormy = #494E6B
+
+hover style tyhat takes in text on argument */

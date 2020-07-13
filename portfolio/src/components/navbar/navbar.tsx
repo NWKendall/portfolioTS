@@ -1,25 +1,22 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Tooltip, Icon } from '@material-ui/core';
-import EmailIcon from '@material-ui/icons/Email';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
-import { useStyles } from './navbar.styles';
-
+import React from "react";
+import './navbar.styles.css';
+import EmailIcon from "@material-ui/icons/Email";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 
 const NavBar = () => {
-    const classes = useStyles()
-    return (
-        <AppBar position="static" className={classes.navbarContainer}>
-            <Toolbar className={classes.navbar}>
-                <Typography className={classes.name}>Nic Kendall</Typography>
-                <LinkedInIcon aria-label="LinkedIn" className={classes.icon}>LinkedIn</LinkedInIcon>
-                <FileCopyIcon className={classes.icon}>Resume</FileCopyIcon>
-                <Tooltip title="nic.kendall.dev@protonmail.com" className={classes.icon}>
-                    <EmailIcon />                
-                </Tooltip>
-            </Toolbar>
-        </AppBar>
-    )
-}
+  return (
+    <div className="navbarContainer">
+      <nav className="navbar">
+        <h3 className="myName">Nic Kendall</h3>
+          <LinkedInIcon aria-label="LinkedIn" className="icon">
+            LinkedIn
+          </LinkedInIcon>
+          <FileCopyIcon className="icon">Resume</FileCopyIcon>
+          <EmailIcon target="__blank" href="www.google.com" />
+      </nav>
+    </div>
+  );
+};
 
-export default NavBar
+export default NavBar;
